@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cycora AI Companion</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#C1121F",
+                        "accent-rose": "#F8D7DA",
+                        "charcoal": "#222222",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.25rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #FFFFFF;
+            color: #222222;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<!-- Navigation Bar -->
+<nav class="sticky top-0 z-50 w-full bg-white dark:bg-background-dark border-b border-primary/20 px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-9 rounded-full bg-primary flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-xl">monitor_heart</span>
+</div>
+<h1 class="text-charcoal dark:text-slate-100 text-lg font-bold tracking-tight">AI Companion</h1>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full border border-primary text-primary hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-[20px]">info</span>
+</button>
+</nav>
+<!-- Main Chat Container -->
+<main class="flex flex-col items-center w-full min-h-[calc(100vh-64px)] pb-40">
+<div class="w-full max-w-[700px] px-4 py-6 flex flex-col gap-6">
+<!-- AI Welcome Message -->
+<div class="flex flex-col items-start max-w-[85%] animate-fade-in">
+<div class="flex items-center gap-2 mb-1 ml-1">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary/60">Cycora</span>
+</div>
+<div class="bg-white dark:bg-slate-800 border border-primary/30 rounded-2xl rounded-tl-none p-4 shadow-sm">
+<p class="text-charcoal dark:text-slate-200 leading-relaxed">
+                        Hi, I’m your Cycora Companion ❤️ I’m here to help you understand your cycle, moods, and symptoms. What would you like to know today?
+                    </p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex flex-col items-end w-full animate-fade-in">
+<div class="max-w-[85%]">
+<div class="flex items-center justify-end gap-2 mb-1 mr-1">
+<span class="text-[10px] font-bold uppercase tracking-widest text-charcoal/40 dark:text-slate-400">You</span>
+</div>
+<div class="bg-accent-rose dark:bg-primary/20 rounded-2xl rounded-tr-none p-4 shadow-sm">
+<p class="text-charcoal dark:text-slate-100 leading-relaxed">
+                            I've been feeling unusually tired the last two days. Is this normal for the luteal phase?
+                        </p>
+</div>
+</div>
+</div>
+<!-- AI Response -->
+<div class="flex flex-col items-start max-w-[85%] animate-fade-in">
+<div class="flex items-center gap-2 mb-1 ml-1">
+<span class="text-[10px] font-bold uppercase tracking-widest text-primary/60">Cycora</span>
+</div>
+<div class="bg-white dark:bg-slate-800 border border-primary/30 rounded-2xl rounded-tl-none p-4 shadow-sm">
+<p class="text-charcoal dark:text-slate-200 leading-relaxed">
+                        It is completely normal! During the late luteal phase, your progesterone levels peak and then start to drop, which can significantly impact your energy. It's your body's way of asking for a little extra rest. 🍵
+                    </p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex flex-col items-end w-full animate-fade-in">
+<div class="max-w-[85%]">
+<div class="flex items-center justify-end gap-2 mb-1 mr-1">
+<span class="text-[10px] font-bold uppercase tracking-widest text-charcoal/40 dark:text-slate-400">You</span>
+</div>
+<div class="bg-accent-rose dark:bg-primary/20 rounded-2xl rounded-tr-none p-4 shadow-sm">
+<p class="text-charcoal dark:text-slate-100 leading-relaxed">
+                            What can I do to feel better?
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Section -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-background-dark/95 backdrop-blur-sm border-t border-primary/20 pb-6 pt-4 flex flex-col items-center z-40">
+<!-- Quick Suggestion Pills -->
+<div class="w-full max-w-[700px] px-4 mb-4">
+<div class="flex gap-2 overflow-x-auto hide-scrollbar py-1">
+<button class="whitespace-nowrap px-4 py-2 rounded-full border border-primary/40 text-primary text-sm font-medium hover:bg-primary hover:text-white transition-all">
+                    Why am I feeling low today?
+                </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full border border-primary/40 text-primary text-sm font-medium hover:bg-primary hover:text-white transition-all">
+                    Explain my current phase
+                </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full border border-primary/40 text-primary text-sm font-medium hover:bg-primary hover:text-white transition-all">
+                    How to reduce cramps?
+                </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full border border-primary/40 text-primary text-sm font-medium hover:bg-primary hover:text-white transition-all">
+                    What happens during ovulation?
+                </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full border border-primary/40 text-primary text-sm font-medium hover:bg-primary hover:text-white transition-all">
+                    Cycle care tips
+                </button>
+</div>
+</div>
+<!-- Input Section -->
+<div class="w-full max-w-[700px] px-4 flex items-center gap-3">
+<div class="relative flex-1">
+<input class="w-full h-14 pl-5 pr-12 rounded-2xl border border-primary/20 bg-slate-50 dark:bg-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base" placeholder="Ask something about your cycle..." type="text"/>
+</div>
+<button class="size-14 rounded-full bg-primary text-white flex items-center justify-center shadow-lg hover:bg-primary/90 active:scale-95 transition-all">
+<span class="material-symbols-outlined fill-1">arrow_upward</span>
+</button>
+</div>
+</div>
+<!-- Bottom Navigation Component (Adapted) -->
+<div class="fixed bottom-0 w-full hidden">
+<!-- This component is hidden as the chat uses a specialized fixed input, 
+             but kept structure for component list compliance if needed globally -->
+<div class="flex gap-2 border-t border-primary/20 bg-white px-4 pb-3 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-xs font-medium">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary/60" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<p class="text-xs font-medium">Cycle</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary/60" href="#">
+<span class="material-symbols-outlined">insights</span>
+<p class="text-xs font-medium">Insights</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">chat_bubble</span>
+<p class="text-xs font-medium">Chat</p>
+</a>
+</div>
+</div>
+</body></html>

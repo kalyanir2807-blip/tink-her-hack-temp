@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cycora Dashboard - Medical Grade Cycle Tracking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#C1121F", // Deep Red override
+                        "accent-blush": "#F8D7DA",
+                        "charcoal": "#222222",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#101022",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1.25rem", // 20px
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #FFFFFF;
+            color: #222222;
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 30px -10px rgba(193, 18, 31, 0.1);
+        }
+        .progress-ring-circle {
+            transition: stroke-dashoffset 0.35s;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light text-charcoal font-display min-h-screen pb-24">
+<!-- Header / Navbar -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-primary/20 px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="bg-primary text-white p-1.5 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">water_drop</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-charcoal">Cycora</h1>
+</div>
+<div class="flex items-center gap-3">
+<button class="hidden md:flex items-center gap-2 px-4 py-1.5 border-2 border-primary text-primary font-semibold rounded-full text-sm hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-lg">group</span>
+                Inner Circle
+            </button>
+<div class="size-10 rounded-full border-2 border-accent-blush overflow-hidden bg-slate-100">
+<img class="w-full h-full object-cover" data-alt="User profile picture with a friendly smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVts_452xuyXzDjedQtIH308KFMoYTdQ8RtpFDt6YRiNX8Zg4msozYSxubSkcGC0x-qpoJtjXbsfe3e9GrYEgErDwZShus6i-m5Hda20-ozWlLxvYUiDDekZpjDFItHVTupp28VEAm-FIlHpHVeVbrbpjoQrZPnvMsvaKXDYNOX9VrONvuD4EurqSiPW5_SfOGFZosCMrQJCw88yndcnHFPUwZFT7Rl5G7uxWlZ0O_RCMDzfd3iz5y7uXoQm5cPKqYYLpkMglctJ8"/>
+</div>
+</div>
+</header>
+<main class="max-w-2xl mx-auto px-4 py-6 space-y-6">
+<!-- 1. Current Phase Card -->
+<section class="bg-white rounded-[20px] p-6 custom-shadow border border-slate-50 relative overflow-hidden">
+<div class="flex flex-col md:flex-row items-center gap-8">
+<!-- Circular Progress Ring -->
+<div class="relative flex items-center justify-center size-48 shrink-0">
+<svg class="size-full" viewbox="0 0 100 100">
+<circle class="text-slate-100 stroke-current" cx="50" cy="50" fill="transparent" r="40" stroke-width="8"></circle>
+<circle class="text-primary stroke-current progress-ring-circle" cx="50" cy="50" fill="transparent" r="40" stroke-dasharray="251.2" stroke-dashoffset="62.8" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-slate-400 text-xs font-bold uppercase tracking-widest">Day</span>
+<span class="text-4xl font-extrabold text-charcoal leading-none">22</span>
+<span class="text-slate-400 text-xs font-semibold">of 28</span>
+</div>
+</div>
+<div class="flex-1 space-y-2 text-center md:text-left">
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-accent-blush text-primary text-xs font-bold uppercase tracking-wider mb-2">
+                        Luteal Phase
+                    </div>
+<h2 class="text-2xl font-bold text-charcoal leading-tight">Current Phase: Luteal</h2>
+<p class="text-slate-500 leading-relaxed">Energy may feel lower. Be gentle with yourself and prioritize rest today.</p>
+<div class="pt-4 flex gap-2 justify-center md:justify-start">
+<button class="bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-primary/20 hover:brightness-110 transition-all">
+                            View Details
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Secondary Grid: Next Period & Fertility -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- 2. Next Period Card -->
+<div class="bg-white p-5 rounded-[20px] custom-shadow border border-slate-50 flex flex-col gap-3">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined font-bold">calendar_month</span>
+<h3 class="font-bold text-charcoal">Next Period</h3>
+</div>
+<div>
+<p class="text-xl font-bold text-charcoal">Dec 12</p>
+<p class="text-primary font-medium text-sm">In 5 days</p>
+</div>
+</div>
+<!-- 3. Fertility Insights Card -->
+<div class="bg-white p-5 rounded-[20px] custom-shadow border border-slate-50 flex flex-col gap-3">
+<div class="flex items-center gap-3 text-emerald-600">
+<span class="material-symbols-outlined font-bold">water_drop</span>
+<h3 class="font-bold text-charcoal">Fertility Insights</h3>
+</div>
+<div class="space-y-1">
+<p class="text-sm font-semibold text-charcoal">Ovulation: <span class="text-emerald-600">Dec 28</span></p>
+<p class="text-xs text-slate-500">Fertile Window: Dec 24-29</p>
+</div>
+</div>
+</div>
+<!-- 4. Preparedness Reminder Bar -->
+<section class="bg-accent-blush/40 border border-primary/20 rounded-[20px] p-5 space-y-4">
+<div class="flex items-center gap-3">
+<div class="bg-primary size-8 rounded-full flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-lg">priority_high</span>
+</div>
+<h3 class="font-bold text-charcoal text-lg">Are you prepared?</h3>
+</div>
+<p class="text-sm text-slate-600">Your period is approaching. Make sure you have your essentials ready.</p>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 bg-white border border-primary/20 rounded-full text-xs font-semibold text-charcoal hover:bg-primary/5 transition-colors">Pads</button>
+<button class="px-4 py-2 bg-white border border-primary/20 rounded-full text-xs font-semibold text-charcoal hover:bg-primary/5 transition-colors">Tampons</button>
+<button class="px-4 py-2 bg-white border border-primary/20 rounded-full text-xs font-semibold text-charcoal hover:bg-primary/5 transition-colors">Cup</button>
+<button class="px-4 py-2 bg-white border border-primary/20 rounded-full text-xs font-semibold text-charcoal hover:bg-primary/5 transition-colors">Pain relief</button>
+</div>
+<button class="w-full bg-primary text-white py-3 rounded-xl font-bold transition-transform active:scale-95">
+                Confirm Preparedness
+            </button>
+</section>
+<!-- 5. Today's Insight Card -->
+<section class="bg-white p-5 rounded-[20px] custom-shadow border border-slate-50">
+<div class="flex items-start justify-between">
+<div class="space-y-4">
+<h3 class="text-lg font-bold text-charcoal">Today's Insight</h3>
+<div class="flex gap-4">
+<div class="flex flex-col gap-1">
+<span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Mood</span>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">sentiment_neutral</span>
+<p class="text-sm font-semibold text-charcoal">Slightly low energy</p>
+</div>
+</div>
+<div class="w-px h-8 bg-slate-100"></div>
+<div class="flex flex-col gap-1">
+<span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Tip</span>
+<p class="text-sm font-semibold text-charcoal">Hydrate and rest</p>
+</div>
+</div>
+</div>
+<div class="bg-accent-blush/30 p-3 rounded-full">
+<span class="material-symbols-outlined text-primary">lightbulb</span>
+</div>
+</div>
+</section>
+<!-- 6. Inner Circle Preview -->
+<section class="bg-charcoal text-white rounded-[20px] p-6 overflow-hidden relative">
+<div class="relative z-10 space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-bold text-lg">Inner Circle</h3>
+<span class="bg-white/10 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">4 Friends connected</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3 overflow-hidden">
+<img class="inline-block size-10 rounded-full ring-2 ring-charcoal" data-alt="Female friend avatar with a warm expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRxkZAv8OIEElFt3NE8RmmOQ0V9e-wqkCfCCDQPS54WlBOJgL5oG0kAB8MVA03e7reHi9N594y0hGDum2KPc0hUkS4ZzOEqxnEmWJfJYb1or9A4SrDOTovaoKHXFXeajWFMmvqWZGc4CkkNrOdK6vYKXC22-KkmI5nM3uRj4jNzSxiQ-C2rM5UsPfPqZYz5lQiJI6AObRXgP25HgcaMCmjQ0hxSIuMFGQnEPOzbjK1Rr_V4YzyCUUfCbTcF5kOEbS0K4rcoopNAvw"/>
+<img class="inline-block size-10 rounded-full ring-2 ring-charcoal" data-alt="Cheerful friend avatar with short hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtcyB_H1bfGfigvHMhLyRGn6PXf5IvI9OV3YWCXkWppK6JGZbvCkzRg2VtSHd_DylHszrAVdjd3GZUEXdfg6GqJ8bsvgq6onlEgO_HkGbtxUu3lIhkQRz1WCJqD5usYe-lCFGtZV8XyUzUk6ffeaVi9Cq_Ko_8wClRP3GoB3Mg2hLXUa4t4kVMl1IezEcldPW4oHmHTaPg3kdMXPfa2RGKvkzF6qaTyv3CPIJeL4v63d0utmDmpT5SPBYsdqc0ad9pRCauDzoESSY"/>
+<img class="inline-block size-10 rounded-full ring-2 ring-charcoal" data-alt="Smiling friend avatar with a modern look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8-9KmiMh5B0deILFUxT8sI8N0Y7bGbKU-UurXjQOFDV3PCwSzFqk6icK-01syJTtxYFzFIojaMFFkYeojxXcUayNz8-8MyKTaeiVTE6AACfCBTFVCr68rwlLRR5URxlKPMdQUb_fO3r5jvditRTpCOkgIulC38TmBj_wDTBPrP5aj3iY1rI5w_CqD0C4L5puQIA0-bksWEvcPhyDSZk1ypgNll3cfVMu5-qTwq_SaQ2EIeCF2aaRKIOaSbMkltNhSviQnqxLIgHI"/>
+<div class="inline-flex items-center justify-center size-10 rounded-full ring-2 ring-charcoal bg-primary text-[10px] font-bold">+1</div>
+</div>
+</div>
+<div class="bg-primary/20 border-l-4 border-primary p-3 rounded-r-lg">
+<p class="text-xs font-medium text-white/90 leading-tight">
+<span class="font-bold text-primary italic">Alert:</span> Your friend Sarah may need extra care today.
+                    </p>
+</div>
+<button class="w-full bg-white text-charcoal py-3 rounded-xl font-bold text-sm hover:bg-slate-100 transition-colors">
+                    View Inner Circle
+                </button>
+</div>
+<!-- Decorative background element -->
+<div class="absolute -bottom-10 -right-10 size-40 bg-primary/20 blur-3xl rounded-full"></div>
+</section>
+</main>
+<!-- Bottom Navigation Bar (Mobile) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-xl border-t border-slate-100 px-6 py-3 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined font-bold">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-[10px] font-bold">Cycle</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-bold">Insights</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-bold">Circle</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold">More</span>
+</a>
+</nav>
+</body></html>

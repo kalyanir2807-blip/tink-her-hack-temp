@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cycora | Create Account</title>
+<!-- Google Fonts: Inter for a modern sans-serif look -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDeepRed: '#C1121F',
+            brandSoftGrey: '#6B7280',
+            brandLightGrey: '#E5E7EB',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            'custom': '20px',
+            'input': '18px',
+          },
+          boxShadow: {
+            'card': '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05)',
+            'button': '0 4px 14px 0 rgba(193, 18, 31, 0.39)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles for specific UI effects -->
+<style data-purpose="layout-and-effects">
+    body {
+      background-color: #FFFFFF;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    /* Subtle rose radial glow behind the card for a luxury feel */
+    .bg-glow {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at center, rgba(193, 18, 31, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
+      z-index: -1;
+    }
+
+    /* Focus glow for inputs */
+    .input-glow:focus {
+      outline: none;
+      border-color: #C1121F;
+      box-shadow: 0 0 0 4px rgba(193, 18, 31, 0.1);
+    }
+
+    /* Custom transition for button hover */
+    .btn-transition {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  </style>
+</head>
+<body class="antialiased text-gray-900 px-4 py-8">
+<!-- Background Effect -->
+<div class="bg-glow"></div>
+<!-- BEGIN: MainContainer -->
+<main class="w-full max-w-[450px]" data-purpose="signup-card-container">
+<!-- BEGIN: SignupCard -->
+<section class="bg-white rounded-custom shadow-card p-8 md:p-10 border border-gray-50" data-purpose="signup-card">
+<!-- BEGIN: HeaderSection -->
+<header class="text-center mb-8" data-purpose="card-header">
+<div class="flex justify-center mb-6">
+<!-- Cycora Logo Placeholder: Heart with two silhouettes and a crown -->
+<div aria-hidden="true" class="w-16 h-16 bg-brandDeepRed rounded-full flex items-center justify-center text-white">
+<svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+<path d="m9 7 3 2 3-2"></path>
+<path d="M12 9V7"></path>
+</svg>
+</div>
+</div>
+<h1 class="text-2xl font-bold text-brandDeepRed tracking-tight">Create Account</h1>
+<p class="text-brandSoftGrey text-sm mt-2">Join Cycora and stay in sync with your cycle.</p>
+</header>
+<!-- END: HeaderSection -->
+<!-- BEGIN: RegistrationForm -->
+<form action="#" class="space-y-5" data-purpose="registration-form" method="POST">
+<!-- Full Name Input -->
+<div class="space-y-1">
+<label class="block text-xs font-medium text-gray-500 ml-2" for="full-name">Full Name</label>
+<input class="w-full px-5 py-3.5 rounded-input border-brandLightGrey text-sm input-glow transition-all" id="full-name" name="full-name" placeholder="Jane Doe" required="" type="text"/>
+</div>
+<!-- Email Input -->
+<div class="space-y-1">
+<label class="block text-xs font-medium text-gray-500 ml-2" for="email">Email Address</label>
+<input class="w-full px-5 py-3.5 rounded-input border-brandLightGrey text-sm input-glow transition-all" id="email" name="email" placeholder="jane@example.com" required="" type="email"/>
+</div>
+<!-- Create Password Input -->
+<div class="space-y-1">
+<label class="block text-xs font-medium text-gray-500 ml-2" for="password">Create Password</label>
+<div class="relative">
+<input class="w-full px-5 py-3.5 rounded-input border-brandLightGrey text-sm input-glow transition-all pr-12" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-brandDeepRed" data-purpose="password-visibility-toggle" id="togglePassword" type="button">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- Confirm Password Input -->
+<div class="space-y-1">
+<label class="block text-xs font-medium text-gray-500 ml-2" for="confirm-password">Confirm Password</label>
+<input class="w-full px-5 py-3.5 rounded-input border-brandLightGrey text-sm input-glow transition-all" id="confirm-password" name="confirm-password" placeholder="••••••••" required="" type="password"/>
+</div>
+<!-- Terms & Privacy Checkbox -->
+<div class="flex items-center space-x-3 py-2">
+<input class="h-4 w-4 rounded border-brandLightGrey text-brandDeepRed focus:ring-brandDeepRed" id="terms" name="terms" required="" type="checkbox"/>
+<label class="text-xs text-gray-500 leading-tight" for="terms">
+            I agree to the <a class="text-brandDeepRed font-semibold hover:underline" href="#">Terms &amp; Privacy Policy</a>
+</label>
+</div>
+<!-- Primary Button -->
+<div class="pt-2">
+<button class="w-full bg-brandDeepRed text-white font-semibold py-4 rounded-input shadow-button btn-transition hover:bg-red-800 hover:-translate-y-0.5 active:translate-y-0" data-purpose="submit-button" type="submit">
+            Create Account
+          </button>
+</div>
+</form>
+<!-- END: RegistrationForm -->
+<!-- BEGIN: BottomLink -->
+<footer class="mt-8 text-center" data-purpose="card-footer">
+<p class="text-sm text-gray-500">
+          Already have an account? 
+          <a class="text-brandDeepRed font-bold hover:underline ml-1" href="#">Login</a>
+</p>
+</footer>
+<!-- END: BottomLink -->
+</section>
+<!-- END: SignupCard -->
+</main>
+<!-- END: MainContainer -->
+<script data-purpose="ui-interactivity">
+    // Simple password visibility toggle logic
+    const toggleBtn = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+
+    toggleBtn.addEventListener('click', () => {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      
+      // Update icon opacity as feedback
+      toggleBtn.classList.toggle('text-brandDeepRed');
+    });
+
+    // Form submission prevent default for demonstration
+    document.querySelector('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Account creation feature would be triggered here.');
+    });
+  </script>
+</body></html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cycora - Premium Menstrual Wellness</title>
+<!-- Tailwind CSS v3 with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandRed: '#C1121F',
+            brandGold: '#C6A75E',
+            brandRose: '#F8D8DC',
+            charcoal: '#222222',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 1s ease-out forwards',
+            'float': 'floating 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            floating: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-animations">
+    .delay-100 { animation-delay: 0.1s; }
+    .delay-300 { animation-delay: 0.3s; }
+    .delay-500 { animation-delay: 0.5s; }
+    
+    /* Radial glow effect for the luxury feel behind the logo */
+    .rose-glow {
+      background: radial-gradient(circle, rgba(248, 216, 220, 0.6) 0%, rgba(255, 255, 255, 0) 70%);
+    }
+
+    /* Custom drop shadow for the logo */
+    .logo-shadow {
+      filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+    }
+
+    /* Gold glow for the crown */
+    .crown-glow {
+      filter: drop-shadow(0 0 8px rgba(198, 167, 94, 0.5));
+    }
+  </style>
+</head>
+<body class="bg-[#FFFFFF] text-charcoal h-screen overflow-hidden font-sans">
+<!-- BEGIN: SplashContainer -->
+<main class="flex flex-col items-center justify-center h-full w-full px-6 text-center relative" data-purpose="intro-screen">
+<!-- Background Glow for Luxury Aesthetic -->
+<div class="absolute w-[400px] h-[400px] rose-glow -z-10 rounded-full opacity-60"></div>
+<!-- BEGIN: BrandHeader -->
+<header class="mb-12 opacity-0 animate-fade-in-up">
+<h1 class="text-brandRed text-5xl md:text-6xl font-bold tracking-[0.15em] mb-2" style="font-family: sans-serif;">
+        CYCORA
+      </h1>
+<p class="text-gray-400 text-sm tracking-widest font-light uppercase">
+        in sync with you
+      </p>
+</header>
+<!-- END: BrandHeader -->
+<!-- BEGIN: LogoSection -->
+<div class="relative mb-16 opacity-0 animate-fade-in-up delay-300 flex justify-center items-center" data-purpose="logo-container">
+<div class="animate-float">
+<!-- Using an SVG for a medical-grade, crisp, premium custom logo -->
+<svg class="logo-shadow" height="180" viewbox="0 0 100 100" width="180" xmlns="http://www.w3.org/2000/svg">
+<!-- Heart Shape -->
+<path d="M50 85 C50 85 15 65 15 35 C15 20 30 15 40 25 C43 28 47 33 50 33 C53 33 57 28 60 25 C70 15 85 20 85 35 C85 65 50 85 50 85Z" fill="#C1121F"></path>
+<!-- Feminine Silhouettes (Stylized negative space or outlines) -->
+<path d="M42 38 C42 38 35 45 35 55 C35 65 40 70 42 72" fill="none" stroke="white" stroke-linecap="round" stroke-width="2"></path>
+<path d="M58 38 C58 38 65 45 65 55 C65 65 60 70 58 72" fill="none" stroke="white" stroke-linecap="round" stroke-width="2"></path>
+<!-- Gold Crown with Glow -->
+<g class="crown-glow">
+<path d="M42 22 L45 27 L50 20 L55 27 L58 22 L58 30 L42 30 Z" fill="#C6A75E"></path>
+</g>
+</svg>
+</div>
+</div>
+<!-- END: LogoSection -->
+<!-- BEGIN: ActionSection -->
+<section class="w-full max-w-xs opacity-0 animate-fade-in-up delay-500" data-purpose="cta-button-container">
+<button class="w-full bg-brandRed text-white font-semibold py-4 px-8 rounded-[20px] shadow-lg hover:bg-red-800 transition-all duration-300 active:scale-95 text-lg" id="btn-get-started">
+        Get Started
+      </button>
+<!-- Subtle indicator of medical quality -->
+<p class="mt-6 text-[10px] text-gray-400 uppercase tracking-widest">
+        Professional Wellness &amp; Insights
+      </p>
+</section>
+<!-- END: ActionSection -->
+</main>
+<!-- END: SplashContainer -->
+<script data-purpose="interactivity">
+    // Simple ripple effect or button click handler
+    document.getElementById('btn-get-started').addEventListener('click', function() {
+      // Simulate navigation to onboarding
+      console.log('Navigating to onboarding...');
+      this.innerHTML = '<span class="flex justify-center items-center"><svg class="animate-spin h-5 w-5 mr-3 text-white" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Initializing...</span>';
+    });
+  </script>
+</body></html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Forgot Password - Cycora</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- BEGIN: Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              deepRed: '#C1121F',
+              softGrey: '#71717A',
+              lightBorder: '#E4E4E7',
+            },
+          },
+          borderRadius: {
+            'card': '20px',
+            'button': '18px',
+          },
+          boxShadow: {
+            'card': '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05)',
+            'button': '0 4px 12px rgba(193, 18, 31, 0.2)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- END: Tailwind Configuration -->
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="animations">
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+    
+    /* Micro-interactions for inputs */
+    .input-focus-effect:focus {
+      outline: none;
+      border-color: #C1121F !important;
+      box-shadow: 0 0 0 4px rgba(193, 18, 31, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    /* Button hover state */
+    .btn-hover:active {
+      transform: scale(0.98);
+      opacity: 0.95;
+    }
+  </style>
+<style data-purpose="typography">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="bg-[#FFFFFF] min-h-screen flex flex-col items-center justify-center p-6">
+<!-- BEGIN: Forgot Password Card -->
+<main class="w-full max-w-md bg-white rounded-card shadow-card p-8 animate-fade-in" data-purpose="reset-password-container">
+<!-- BEGIN: Logo Section -->
+<header class="flex flex-col items-center mb-8" data-purpose="header-logo">
+<!-- Heart Logo with silhouettes and crown as described in SCREEN_47 -->
+<div class="w-16 h-16 mb-4 flex items-center justify-center">
+<svg class="w-full h-full text-brand-deepRed fill-current" viewbox="0 0 100 100">
+<!-- Simplified representation of the requested logo -->
+<path d="M50 85c-1.5 0-3-.5-4.2-1.5C32 72.5 15 57 15 37.5 15 25.5 24.5 16 36.5 16c6.5 0 11.5 3 13.5 7.5 2-4.5 7-7.5 13.5-7.5 12 0 21.5 9.5 21.5 21.5 0 19.5-17 35-30.8 46c-1.2 1-2.7 1.5-4.2 1.5z"></path>
+<!-- Crown detail at the top center -->
+<path d="M44 14l3 4h6l3-4-6 2z" fill="#D4AF37"></path>
+</svg>
+</div>
+<h1 class="text-2xl font-bold text-brand-deepRed mb-2 tracking-tight">Forgot Password</h1>
+<p class="text-brand-softGrey text-sm text-center">Enter your email to reset your password</p>
+</header>
+<!-- END: Logo Section -->
+<!-- BEGIN: Reset Form -->
+<form action="#" class="space-y-6" data-purpose="password-reset-form" method="POST">
+<!-- Email Input Field -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-zinc-800 ml-1" for="email">Email Address</label>
+<input class="w-full px-4 py-3 rounded-xl border border-brand-lightBorder text-zinc-900 placeholder:text-zinc-400 input-focus-effect" id="email" name="email" placeholder="Enter your registered email" required="" type="email"/>
+</div>
+<!-- Action Button -->
+<button class="w-full bg-brand-deepRed text-white font-semibold py-4 rounded-button shadow-button btn-hover transition-all duration-200" type="submit">
+        Send Reset Link
+      </button>
+</form>
+<!-- END: Reset Form -->
+<!-- BEGIN: Footer Links -->
+<footer class="mt-8 text-center" data-purpose="form-footer">
+<p class="text-sm text-brand-softGrey">
+        Remember your password? 
+        <a class="text-brand-deepRed font-semibold hover:underline ml-1" href="#">Back to Login</a>
+</p>
+</footer>
+<!-- END: Footer Links -->
+</main>
+<!-- END: Forgot Password Card -->
+<!-- BEGIN: Bottom Indicator (iOS style) -->
+<div class="mt-8 mb-4">
+<div class="w-24 h-1 bg-zinc-200 rounded-full opacity-50"></div>
+</div>
+<!-- END: Bottom Indicator -->
+</body></html>

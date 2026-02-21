@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cycora - Medical-Grade Cycle Insights</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#C1121F",
+                        "primary-soft": "#F8D7DA",
+                        "charcoal": "#222222",
+                        "background-light": "#FFFFFF",
+                        "background-dark": "#0A0A0A",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "20px",
+                        "xl": "3rem",
+                        "button": "12px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #FFFFFF;
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+        }
+        /* Custom date picker appearance reset for clean UI */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(0.2);
+            cursor: pointer;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light text-charcoal flex min-h-screen items-center justify-center p-6">
+<div class="w-full max-w-[500px] flex flex-col items-center">
+<!-- Header Section -->
+<header class="w-full text-center mb-8">
+<div class="flex justify-center mb-3">
+<div class="bg-primary/5 p-3 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">dark_mode</span>
+</div>
+</div>
+<h1 class="text-2xl font-extrabold tracking-tight text-charcoal mb-1">Cycora</h1>
+<p class="text-slate-500 font-medium">Let’s understand your rhythm.</p>
+<div class="w-12 h-[2px] bg-primary mx-auto mt-6"></div>
+</header>
+<!-- Main Card Section -->
+<main class="w-full bg-white rounded-lg p-8 custom-shadow border border-slate-100">
+<div class="space-y-8">
+<!-- Field 1: Date Picker -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-charcoal flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">calendar_today</span>
+                        When did your last period begin?
+                    </label>
+<input class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-charcoal transition-all" type="date" value="2023-10-05"/>
+<p class="text-[12px] text-slate-400 font-medium">This helps us predict your next cycle.</p>
+</div>
+<!-- Field 2: Cycle Duration -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-charcoal flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">rebase_edit</span>
+                        How long is your cycle?
+                    </label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-charcoal transition-all" max="45" min="15" placeholder="28" type="number" value="28"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm font-semibold">days</span>
+</div>
+<p class="text-[12px] text-slate-400 font-medium">Usually between 21–35 days.</p>
+</div>
+<!-- Field 3: Period Length -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-charcoal flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">water_drop</span>
+                        How many days does your period last?
+                    </label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-charcoal transition-all" max="14" min="1" placeholder="5" type="number" value="5"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm font-semibold">days</span>
+</div>
+</div>
+<!-- Field 4: Dropdown Feelings -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-charcoal flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">sentiment_neutral</span>
+                        How do you usually feel before your period?
+                    </label>
+<div class="relative">
+<select class="w-full appearance-none px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary text-charcoal transition-all">
+<option disabled="" selected="" value="">Select an option</option>
+<option value="stable">Stable</option>
+<option value="mood-swings">Mood swings</option>
+<option value="low-energy">Low energy</option>
+<option value="irritable">Irritable</option>
+<option value="not-sure">Not sure</option>
+</select>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</div>
+</div>
+</div>
+<!-- CTA Button -->
+<button class="w-full bg-primary hover:bg-[#A30F1A] active:bg-[#8B0D16] text-white font-bold py-4 rounded-button transition-colors duration-200 shadow-lg shadow-primary/20 mt-4">
+                    Generate My Cycle Insights
+                </button>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="mt-8 text-center px-4">
+<p class="text-slate-400 text-sm font-medium leading-relaxed">
+                You’re building a better understanding of yourself.
+            </p>
+</footer>
+</div>
+<!-- Background Decoration -->
+<div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
+<div class="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-primary-soft/30 blur-3xl"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[30%] h-[30%] rounded-full bg-primary-soft/20 blur-3xl"></div>
+</div>
+</body></html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cycora Community | Premium Safe Space</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#C1121F",
+                        "soft-blush": "#F8D7DA",
+                        "dark-charcoal": "#222222",
+                        "background-light": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.25rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Public Sans', sans-serif;
+                -webkit-font-smoothing: antialiased;
+                @apply bg-background-light text-dark-charcoal;
+            }
+        }
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(193, 18, 31, 0.08);
+        }
+        .nav-border {
+            border-bottom: 1px solid #C1121F;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen">
+<nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md nav-border">
+<div class="max-w-2xl mx-auto px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl font-bold">blur_on</span>
+<h1 class="text-xl font-bold tracking-tight text-dark-charcoal">Cycora <span class="font-normal text-slate-500">Community</span></h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex items-center gap-1 bg-soft-blush/40 px-3 py-1.5 rounded-full cursor-pointer">
+<span class="material-symbols-outlined text-sm text-primary">public</span>
+<span class="text-xs font-medium uppercase tracking-wider">Global</span>
+<span class="material-symbols-outlined text-xs">expand_more</span>
+</div>
+<button class="p-2 hover:bg-soft-blush/50 rounded-full transition-colors text-slate-500">
+<span class="material-symbols-outlined">flag</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="max-w-2xl mx-auto px-4 py-8 space-y-8">
+<section class="relative overflow-hidden rounded-xl bg-soft-blush p-8 border border-primary/10">
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="space-y-2">
+<h2 class="text-2xl font-bold text-dark-charcoal flex items-center gap-2">
+                        Global Sisterhood 🌍
+                    </h2>
+<p class="text-slate-600 max-w-md leading-relaxed">
+                        A safe, supportive space to share your journey and find strength in our collective wisdom. Your voice is heard here.
+                    </p>
+</div>
+<button class="flex-shrink-0 border-2 border-primary text-primary font-bold py-2.5 px-6 rounded-xl hover:bg-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">edit_note</span>
+                    Create Post
+                </button>
+</div>
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+</section>
+<div class="space-y-6">
+<article class="card-hover bg-soft-blush border border-primary/5 rounded-xl p-6 transition-all duration-300 shadow-sm">
+<div class="flex items-center justify-between mb-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white/60 flex items-center justify-center text-primary/40">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-sm font-semibold">Anonymous</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-white/60 text-primary/70 uppercase tracking-widest font-bold">UK</span>
+</div>
+<span class="text-xs text-slate-500">2 hours ago</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+<div class="mb-6">
+<p class="text-lg leading-relaxed text-dark-charcoal">
+                        Feeling a bit overwhelmed today, but grateful for this community. Has anyone else experienced similar shifts in their energy during this phase? Looking for some shared perspective.
+                    </p>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-primary/10">
+<button class="flex-1 flex items-center justify-center gap-2 py-2.5 text-primary font-bold rounded-lg hover:bg-white/40 transition-colors">
+<span class="material-symbols-outlined text-lg fill-1">favorite</span>
+                        Send Support
+                    </button>
+<button class="flex-1 flex items-center justify-center gap-2 py-2.5 bg-soft-blush border border-primary/5 text-dark-charcoal font-semibold rounded-lg hover:bg-white/60 transition-colors">
+<span class="material-symbols-outlined text-lg">chat_bubble</span>
+                        Reply
+                    </button>
+</div>
+</article>
+<article class="card-hover bg-soft-blush border border-primary/5 rounded-xl p-6 transition-all duration-300 shadow-sm">
+<div class="flex items-center justify-between mb-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white/60 flex items-center justify-center text-primary/40">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-sm font-semibold">Anonymous</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-white/60 text-primary/70 uppercase tracking-widest font-bold">CANADA</span>
+</div>
+<span class="text-xs text-slate-500">5 hours ago</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+<div class="mb-6">
+<p class="text-lg leading-relaxed text-dark-charcoal">
+                        I finally found the courage to speak up about my health concerns to my doctor. It’s a small step, but I wouldn't have done it without the stories I read here. Thank you for making me feel less alone in this journey. ✨
+                    </p>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-primary/10">
+<button class="flex-1 flex items-center justify-center gap-2 py-2.5 text-primary font-bold rounded-lg hover:bg-white/40 transition-colors">
+<span class="material-symbols-outlined text-lg fill-1">favorite</span>
+                        Send Support
+                    </button>
+<button class="flex-1 flex items-center justify-center gap-2 py-2.5 bg-soft-blush border border-primary/5 text-dark-charcoal font-semibold rounded-lg hover:bg-white/60 transition-colors">
+<span class="material-symbols-outlined text-lg">chat_bubble</span>
+                        Reply
+                    </button>
+</div>
+</article>
+<article class="card-hover bg-soft-blush border border-primary/5 rounded-xl p-6 transition-all duration-300 shadow-sm">
+<div class="flex items-center justify-between mb-5">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white/60 flex items-center justify-center text-primary/40">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-sm font-semibold">Anonymous</span>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-white/60 text-primary/70 uppercase tracking-widest font-bold">AUSTRALIA</span>
+</div>
+<span class="text-xs text-slate-500">9 hours ago</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+<div class="mb-6">
+<p class="text-lg leading-relaxed text-dark-charcoal">
+                        Practicing mindfulness today. Remember that it's okay to take a break when your body asks for it. We are not machines, we are beautiful, cyclical beings. Sending love to everyone currently in their rest phase. 🌙
+                    </p>
+</div>
+<div class="flex items-center gap-3 pt-4 border-t border-primary/10">
+<button class="flex-1 flex items-center justify-center gap-2 py-2.5 text-primary font-bold rounded-lg hover:bg-white/40 transition-colors">
+<span class="material-symbols-outlined text-lg fill-1">favorite</span>
+                        Send Support
+                    </button>
+<button class="flex-1 flex items-center justify-center gap-2 py-2.5 bg-soft-blush border border-primary/5 text-dark-charcoal font-semibold rounded-lg hover:bg-white/60 transition-colors">
+<span class="material-symbols-outlined text-lg">chat_bubble</span>
+                        Reply
+                    </button>
+</div>
+</article>
+</div>
+<div class="flex flex-col items-center justify-center py-12 text-primary/30">
+<span class="material-symbols-outlined text-4xl mb-2">filter_vintage</span>
+<p class="text-sm italic text-slate-400">You've reached the end of the recent stories</p>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 right-0 bg-white border-t border-primary/10 px-4 pb-6 pt-3 z-50">
+<div class="max-w-2xl mx-auto flex items-center justify-between">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined font-bold">group</span>
+<span class="text-[10px] font-bold">Community</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+<span class="text-[10px] font-medium">Insights</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</div>
+<div class="h-24"></div>
+
+</body></html>
