@@ -1,8 +1,4 @@
-![Description](img.png)
-![Description](screen.png)
-![Description](photo.png)
-![Description](pic.png)
-![Description](photooo.png)
+
 # CYCORA 🎯  
 ### *In Sync With You*
 
@@ -107,6 +103,11 @@ Cycora blends wellness, technology, and emotional intelligence.
 
 ---
 
+![Description](img.png)
+![Description](screen.png)
+![Description](photo.png)
+![Description](pic.png)
+![Description](photooo.png)
 # Implementation
 
 ## For Software:
