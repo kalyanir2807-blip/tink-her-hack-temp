@@ -680,5 +680,5 @@ if __name__ == '__main__':
     print("  📡 API running at http://localhost:5001/api")
     print("  🌐 Frontend at http://localhost:5001")
     print("="*50 + "\n")
-    app.run(debug=True, port=10000,host=0.0.0.0)
+    app.run(debug=True, port=10000,host="0.0.0.0")
 
